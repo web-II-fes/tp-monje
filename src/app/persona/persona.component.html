@@ -1,19 +1,28 @@
-<h1>Persona</h1>
+<form [formGroup]="itemForm" (ngSubmit)=submit()>
 
-<form >
-    <label>nombre
-        <input type="text" >
-    </label>
-    <br>
-    <label>apellido
-        <input type="text" >
-    </label>
-    <br>
-    <label>edad
-        <input type="number" >
-    </label>
-    <br>
-    <button type="submit">Guardar</button>
-    
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="nombre" type="text" formControlName="nombre" >
+    </mat-form-field>
+<br>
+    <mat-form-field appearance="outline">
+        <mat-label>Apellido</mat-label>
+        <input matInput placeholder="apellido" type="text" formControlName="apellido">
+    </mat-form-field>
+<br>
+    <mat-form-field appearance="outline">
+        <mat-label>Edad</mat-label>
+        <input matInput placeholder="edad" type="number" formControlName="edad">
+    </mat-form-field>
+<br>
+  <div>
+    <button mat-raised-button>Guardar</button>
+ </div>   
+<div *ngFor="let persona of personas">
+    <p>Nomnre y apellido: {{persona.nombre}} {{persona.apellido}} </p>
+    <p>Edad: {{persona.edad}}  </p>
+    <button type="button" mat-raised-button color="primary" (click)="editarPersona(persona)">editar</button>
+    <button type="button" mat-raised-button color="warn" (click)="borrarPersona(persona)">borrar</button>
+</div>
 
 </form>
