@@ -51,6 +51,7 @@ export class PersonaComponent implements OnInit {
   borrarPersona(persona: any){
     this.idPersona = persona._id;
     this.personaService.borrarPersona(this.idPersona).subscribe(resu => console.log( "Se Borra persona: " ));
+    location.reload();
   }
 
 
@@ -67,6 +68,7 @@ export class PersonaComponent implements OnInit {
           
       });
     }
+    location.reload();
   }
 
 }
