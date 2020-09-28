@@ -1,0 +1,27 @@
+<form [formGroup]="cursoForm" (ngSubmit)=submit()>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre Curso</mat-label>
+        <input matInput placeholder="nombre curso" type="text" formControlName="nombreCurso" >
+    </mat-form-field>
+<br>
+    <mat-form-field appearance="outline">
+        <mat-label>Profesor</mat-label>
+        <input matInput placeholder="profesor" type="text" formControlName="profesor">
+    </mat-form-field>
+<br>
+    <mat-form-field appearance="outline">
+        <mat-label>Año</mat-label>
+        <input matInput placeholder="anio" type="number" formControlName="anio">
+    </mat-form-field>
+<br>
+    <mat-form-field appearance="outline">
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="estado" type="text" formControlName="estado">
+    </mat-form-field>  
+<br>
+  <div>
+    <button mat-raised-button color="primary" >Guardar</button>
+ </div>  
+ 
+ </form>

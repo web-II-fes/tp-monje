@@ -1,0 +1,54 @@
+<h3>Cursos</h3>
+<button mat-raised-button color="primary" [routerLink]="'/crear-curso-component/new'" routerLinkActive="active">Cargar Nuevo Alumno</button>
+
+<router-outlet></router-outlet>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8"  >
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombreCurso">
+      <mat-header-cell *matHeaderCellDef>Nombre Curos</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.nombreCurso | titlecase}} </mat-cell>
+    </ng-container>
+  
+    <!-- apellido Column -->
+    <ng-container matColumnDef="profesor">
+      <mat-header-cell *matHeaderCellDef>Profesor</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.profesor | titlecase}} </mat-cell>
+    </ng-container>
+  
+    <!-- edad Column -->
+    <ng-container matColumnDef="anio">
+      <mat-header-cell *matHeaderCellDef>Año</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.anio}} </mat-cell>
+    </ng-container>
+
+    <!-- materia Column -->
+    <ng-container matColumnDef="estado">
+      <mat-header-cell *matHeaderCellDef>Estado</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.estado}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="editar">
+      <mat-header-cell *matHeaderCellDef>Editar</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button mat-mini-fab color="link" (click)="editar(element._id)" >
+          <mat-icon>create</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="borrar">
+        <mat-header-cell *matHeaderCellDef>Borrar</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button mat-mini-fab color="warn" (click)="borrar(element._id)" >
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns; "  ></mat-row>
+  </mat-table>
+
+ 

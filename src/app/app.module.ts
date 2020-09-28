@@ -8,21 +8,30 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatInputModule } from '@angular/material/input';
+
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 import { PersonaComponent } from './persona/persona.component';
 import { PersonaService } from './servicio/persona.service';
+import { CrearCursoComponent } from './curso/crear-cursos/crear-curso.component';
+import { CursosComponent } from './curso/cursos/cursos.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaComponent
+    PersonaComponent,
+    CrearCursoComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,11 @@ import { PersonaService } from './servicio/persona.service';
     MatCardModule,
     MatMenuModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatIconModule
   ],
   providers: [PersonaService],
   bootstrap: [AppComponent]

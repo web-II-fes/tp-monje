@@ -1,5 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/crear-curso-component" routerLinkActive="active">Crear Curso </button>
+  <button mat-menu-item routerLink="/curso-component" routerLinkActive="active">Cursos</button>
 
-<app-persona></app-persona>
-
+</mat-menu>
 <router-outlet></router-outlet>
