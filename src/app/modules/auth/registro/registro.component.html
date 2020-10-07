@@ -1,0 +1,25 @@
+<form [formGroup]="registroForm" (ngSubmit)=submit()>
+    <mat-card style="text-align: center;">
+        <h2>Registrarse!</h2>
+    <mat-form-field appearance="outline">
+        <mat-label>Usuario: </mat-label>
+        <input matInput placeholder="usuario" type="text" formControlName="username" >
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Contraseña: </mat-label>
+        <input matInput placeholder="contraseña" type="password" formControlName="password">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Email: </mat-label>
+        <input matInput placeholder="Email" type="email" formControlName="email">
+    </mat-form-field>
+    <br>
+    <div>
+      <button mat-raised-button color="primary">Registrarse</button>
+   </div>  
+
+</mat-card>
+
+</form>
