@@ -20,19 +20,13 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 
-import { PersonaComponent } from './persona/persona.component';
-import { PersonaService } from './servicio/persona.service';
-import { CrearCursoComponent } from './curso/crear-cursos/crear-curso.component';
-import { CursosComponent } from './curso/cursos/cursos.component';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PersonaComponent,
-    CrearCursoComponent,
-    CursosComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +46,7 @@ import { CursosComponent } from './curso/cursos/cursos.component';
     MatSlideToggleModule,
     MatIconModule
   ],
-  providers: [PersonaService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

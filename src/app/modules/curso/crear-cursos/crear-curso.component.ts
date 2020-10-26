@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
+import { CursoService } from '../servicios/curso.service';
 
-import {CursoService} from '../../servicio/curso.service';
 
 @Component({
   selector: 'app-curso',
@@ -66,7 +66,7 @@ export class CrearCursoComponent implements OnInit {
       }); 
     } 
 
-    this.router.navigate(['/curso-component'])
+    this.router.navigate(['/cursos/curso-component'])
 
   }
 

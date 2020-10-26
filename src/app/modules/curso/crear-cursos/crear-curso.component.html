@@ -1,3 +1,15 @@
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/cursos/crear-curso-component/new" routerLinkActive="active">Crear Curso </button>
+  <button mat-menu-item routerLink="/cursos/curso-component" routerLinkActive="active">Cursos</button>
+  <hr>
+  <button mat-menu-item routerLink="/personas/persona/new" routerLinkActive="active">Crear Persona </button>
+  <button mat-menu-item routerLink="/personas/tablaPersona" routerLinkActive="active">Personas</button>
+  <hr>
+  <button mat-menu-item routerLink="/personas/funciones" routerLinkActive="active">Funciones</button>
+</mat-menu>
+
+
 <form [formGroup]="cursoForm" (ngSubmit)=submit()>
 
     <mat-form-field appearance="outline">
@@ -25,3 +37,6 @@
  </div>  
  
  </form>
+
+
+ <router-outlet></router-outlet>

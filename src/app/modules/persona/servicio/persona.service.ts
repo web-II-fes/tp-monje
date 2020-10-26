@@ -25,6 +25,9 @@ export class PersonaService {
     return this.httpClient.get(this.personaUrl + 'persona');
   }
 
+  getPersonaById(idPersona: string){
+    return this.httpClient.get(this.personaUrl + 'personaId/' + idPersona);
+  }
 
   editarPersona( idPersona, persona ){
     return this.httpClient.put(this.personaUrl + 'persona/' + idPersona, JSON.stringify(persona),this.httpOptions);

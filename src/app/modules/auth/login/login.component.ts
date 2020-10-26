@@ -15,6 +15,11 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
+  isLoginFailed: boolean = true;
+  isLoggedIn: boolean = false;
+  errorMessage: string;
+
+
   constructor(private tokenStorage: TokenStorage, private auth: AuthService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
@@ -35,7 +40,21 @@ export class LoginComponent implements OnInit {
       debugger;
       let user = data;
       this.tokenStorage.saveToken(data.token);
-    });
+
+      this.isLoginFailed = false;
+      this.isLoggedIn = true;
+
+      this.router.navigate(['/cursos/curso-component']);
+
+
+    },
+        (err) => {
+          this.errorMessage = err.error.message;
+          this.isLoginFailed = true;
+        }
+    );
+
+    
     
   }
 
