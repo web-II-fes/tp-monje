@@ -10,6 +10,18 @@ import { PersonaService } from '../servicio/persona.service';
 export class FuncionesComponent implements OnInit {
 
   personas: Persona[];
+  var1: any;
+  var2: any;
+  var3: any;
+  var4: any;
+  var5: any;
+  var6: any;
+  var7: any;
+  var8: any;
+  var9: any;
+  var10: any;
+  var11: any;
+  var12: any;
 
 
   constructor(private personaService: PersonaService) { }
@@ -27,7 +39,7 @@ export class FuncionesComponent implements OnInit {
     });
   }
 
-  funcion(){
+funcion(){
 
 
 let nombres: String [] = [];
@@ -47,40 +59,40 @@ while (this.personas.length > i) {
 let persona = this.personas[0].nombre+' '+this.personas[0].apellido;
 
 // split
-console.log('Persona: ', persona.split(' '));
+this.var1 = 'Persona: '+ persona.split(' ');
 
 //join
-console.log("nombres Join: ", nombres.join(' + '));
+this.var2= "nombres Join: "+  nombres.join(' + ');
 
 // indexOf()
-console.log("Posicion de 'Alexis': ", nombres.indexOf('Alexis'));
+this.var3= "Posicion de 'Alexis': "+ nombres.indexOf('Alexis');
 
 // reverse
-console.log('Apellidos Reverse: ', apellidos.reverse());
+this.var4='Apellidos Reverse: '+ apellidos.reverse();
 
 // lastIndexOf()
-console.log('ultima posicion de edad 20: ', edades.lastIndexOf(20));
+this.var5='ultima posicion de edad 20: '+ edades.lastIndexOf(20);
 
 // includes()
-console.log('edad encontrada ? : ', edades.includes(20));
+this.var6='edad 20 se encuentra ? : '+ edades.includes(20);
 
 // find()
-console.log('Primer Edad mayor a 5: ', edades.find(x => x > 5));
+this.var7= 'Primer Edad mayor a 5: '+ edades.find(x => x > 5);
 
 // filter()
-console.log('Edades Mayores a 5: ', edades.filter(x => x > 5));
+this.var8='Edades Mayores a 5: '+ edades.filter(x => x > 5);
 
 // filter()
-console.log('Edades Menores a 5: ', edades.filter(x => x < 5));
+this.var9= 'Edades Menores a 5: '+ edades.filter(x => x < 5);
 
 // map()
-console.log('Edades + 2: ', edades.map(x => x + 2));
+this.var10= 'Edades + 2: '+ edades.map(x => x + 2);
 
 //sort()
-console.log('nombres ordenados : ', nombres.sort());
+this.var11= 'nombres ordenados : '+ nombres.sort();
 
 // splice(index, amount)
-console.log('Primera y Tercera edad: ', edades.splice(0, 2));
+this.var12 = 'Primera y Tercera edad: '+ edades.splice(0, 2);
 
   }
 }
